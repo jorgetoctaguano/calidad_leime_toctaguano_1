@@ -13,6 +13,8 @@ and open the template in the editor.
         <?php
         echo "hola joven";
         echo "holaaaaaaaaaa";
+        
+        echo "prueba app escritorio ";
         ?>
     </body>
 </html>
