@@ -47,18 +47,15 @@ input[type=submit]{
     padding: 10px;
 }
 
-#menu{
-    background-color: #eee;
-    padding: 10px;
-}
-#menu ul{
+
+.ul{
     margin: 0;
     padding: 0;
     list-style: none;
     display: inline-block;
     width: 100%;
 }
-#menu ul li{
+.mli{
     display: inline;
 }
 #menu ul li a{
@@ -69,7 +66,5 @@ input[type=submit]{
     color: rgb(227, 109, 30);
     text-decoration: none;
 }
-.cerrar-sesion{
-    float: right;
-}
+
 
