@@ -23,7 +23,7 @@
 <head>
         <title>Validar formulario</title>
 	<meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="../css/formulario.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/validacion_1.css"/>
          <script 
                  src="http://code.jquery.com/jquery-3.2.1.min.js" 
                  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -95,14 +95,14 @@
          
       
 </head>·
-<body>
+<body background="../imagenes/fondo_inicio3.jpg" >
     
-    <h2><center><font color="red">SUPERMECADO EL MERCADITO</font></center></h2>
+    <h2><center><font color="#AB1A1A">SUPERMECADO EL MERCADITO</font></center></h2>
     <div id="contenido">
-        <input type="text" style="visibility:hidden"  size="5" id="resultadoBusqueda1" />
+        <input type="text"  style="visibility:hidden" size="5" value="falso" id="resultadoBusqueda1" />
    
         <form action="validacion.php" method="POST" >
-        <table>
+        <table color>
           
                 <thead>
                     <tr>
@@ -115,7 +115,7 @@
            <tbody>
                 <tr>
                     <td>
-                         <p>Cedula:<br/><input type="text" id="idcedula" name="cedula" value="<?php if(isset($cedula))echo $cedula?>"></p>
+                         <p>Cedula:<br/><input  type="text" id="idcedula" name="cedula" value="<?php if(isset($cedula))echo $cedula?>"></p>
                          <div id="mcedula"  class="error1"></div>
                          <p> Nombres:<br/> <input type="text"  id="idnombre" name="nombre" value="<?php if(isset($nombre))echo $nombre?>" ></p>
                          <div id="mnombre"  class="error1"></div>
@@ -147,7 +147,7 @@
                                 
                          <p>Usuario Recomendado:<br/> <input type="text" id="iduser" name="usuarior" value="<?php if(isset($usuario))echo $usuario?>" onKeyUp="buscar();"> </p>
                          <div id="muser"  class="error1">Campo nombre Incorrecto</div>
-                         <p>Clave Usurio:<br/><input type="text" id="idcuser" name="clave" ></p> 
+                         <p>Clave Usurio:<br/><input type="password" id="idcuser" name="clave" ></p> 
                          <div id="mcuser"  class="error1">Campo nombre Incorrecto</div>
                     </td>
                 </tr>
@@ -593,10 +593,10 @@
             $("#benviard").click(function()
             {
               var validaruser=$("input#resultadoBusqueda1").val();
-              if(validaruser != "falso")
+              if(!(validaruser == "falso"))
               {  
-                 $("#muser").fadeIn();
-                  $("#muser").text("INGRESE OTRO USUARIO PORFAVOR");
+                  $("#muser").fadeIn();
+                  $("#muser").text("USUARIO NO VALIDO INGRESE OTRO PORFAVOR");
                  return false;
               }
               else
